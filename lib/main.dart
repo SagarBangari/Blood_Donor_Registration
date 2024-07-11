@@ -18,6 +18,7 @@ class BloodDonorRegistrationApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       color: Colors.red,
+     
       home: BloodDonorRegistrationForm(),
     );
   }
@@ -133,9 +134,13 @@ class _BloodDonorRegistrationFormState extends State<BloodDonorRegistrationForm>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Blood Donor Registration Form'),
+        title: Text('Blood Donor Registration Form',style: TextStyle(color: Colors.red),),
+         backgroundColor:Color.fromARGB(255, 79, 40, 180),
       ),
-      body: Padding(
+       body: Container(
+        color: Color.fromARGB(255, 186, 241, 240), 
+        child:Padding(
+        
         padding: EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
@@ -202,7 +207,7 @@ class _BloodDonorRegistrationFormState extends State<BloodDonorRegistrationForm>
                       onPressed: ()=>{},
                       child: Text('Submit', style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 179, 39, 7),
+                        backgroundColor: Color.fromARGB(255, 255, 50, 50),
                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         textStyle: TextStyle(fontSize: 16),
                       ),
@@ -211,6 +216,7 @@ class _BloodDonorRegistrationFormState extends State<BloodDonorRegistrationForm>
           ),
         ),
       ),
+    )
     );
   }
 }
